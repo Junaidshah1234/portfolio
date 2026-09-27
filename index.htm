@@ -362,7 +362,7 @@
   .card h3{font-family:var(--font-display);font-size:1.08rem;font-weight:600;margin-bottom:10px;letter-spacing:-.01em}
   .card p{color:var(--muted);font-size:.92rem;line-height:1.65}
 
-  /* ===== PROJECTS ===== */
+  /* ===== PROJECTS & PLUGINS ===== */
   .project{
     background:var(--card);
     border:1px solid var(--border);
@@ -407,10 +407,20 @@
     border-color:rgba(139,92,246,.3);
     color:#a78bfa;
   }
+  .tag.plugin{
+    background:rgba(245,158,11,.1);
+    border-color:rgba(245,158,11,.3);
+    color:var(--warning);
+  }
   :root[data-theme="light"] .tag.client{
     background:rgba(124,58,237,.08);
     border-color:rgba(124,58,237,.2);
     color:#7c3aed;
+  }
+  :root[data-theme="light"] .tag.plugin{
+    background:rgba(180,83,9,.08);
+    border-color:rgba(180,83,9,.2);
+    color:#b45309;
   }
   .project p{color:var(--muted);font-size:.95rem;margin-bottom:16px;line-height:1.7}
   .project ul{list-style:none;margin-bottom:20px}
@@ -550,6 +560,7 @@
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
+      <a href="#plugins">Plugins</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#testimonials">Testimonials</a>
@@ -570,6 +581,7 @@
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#services">Services</a>
+    <a href="#plugins">Plugins</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#testimonials">Testimonials</a>
@@ -662,18 +674,18 @@
   </div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
-<section id="projects" class="alt">
+<!-- ===== PLUGINS ===== -->
+<section id="plugins" class="alt">
   <div class="container">
-    <div class="section-label reveal">Featured Work</div>
-    <h2 class="reveal">Projects & Live Plugins</h2>
-    <p class="section-desc reveal">A selection of my latest work — continuously updated with new releases and client projects.</p>
+    <div class="section-label reveal">WordPress Plugins</div>
+    <h2 class="reveal">Published Plugins & Extensions</h2>
+    <p class="section-desc reveal">Production-grade plugins built for the WordPress ecosystem — from WordPress.org releases to custom client extensions.</p>
 
     <div class="project reveal">
       <div class="project-header">
         <div>
           <h3>🧮 ShahCalc — Visual Calculator Builder</h3>
-          <span class="tag featured">★ Featured · Open Source</span>
+          <span class="tag plugin">★ Featured · WordPress.org</span>
         </div>
       </div>
       <p>A production-grade, zero-bloat visual calculator builder for WordPress, launched on the official WordPress.org plugin directory.</p>
@@ -693,8 +705,27 @@
     <div class="project reveal">
       <div class="project-header">
         <div>
+          <h3>👨‍🍳 Cooked Child — Custom Recipe Extension</h3>
+          <span class="tag plugin">Client Plugin · AU</span>
+        </div>
+      </div>
+      <p>A custom child plugin for the popular 'Cooked' WordPress recipe plugin, safely extending core functionality without modifying parent files.</p>
+      <ul>
+        <li>"Draft of Changes" workflow for safe recipe editing</li>
+        <li>Private GitHub auto-updater via PluginUpdateChecker</li>
+        <li>Enhanced recipe UI: Imperial overrides, dynamic TOC, accordions</li>
+        <li>Safe TinyMCE sanitization for dynamic data attributes</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://cookandwine.com.au/" target="_blank" rel="noopener">🌐 Client Site</a>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-header">
+        <div>
           <h3>💳 Custom Stripe & PayPal Payment Gateway</h3>
-          <span class="tag client">Client Project · US</span>
+          <span class="tag plugin">Client Plugin · US</span>
         </div>
       </div>
       <p>Developed a highly secure server-side checkout plugin for a US-based wedding business.</p>
@@ -707,23 +738,32 @@
         <a href="https://www.abeautifulceremony.com/" target="_blank" rel="noopener">🌐 Live Site</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label reveal">Featured Projects</div>
+    <h2 class="reveal">Client Projects & Work</h2>
+    <p class="section-desc reveal">A selection of my latest client work — from critical recoveries to complete backend cleanups.</p>
 
     <div class="project reveal">
       <div class="project-header">
         <div>
-          <h3>👨‍🍳 Cooked Child — Custom Recipe Extension</h3>
-          <span class="tag client">Client Project · AU</span>
+          <h3>🚑 WordPress White Screen of Death — Critical Recovery</h3>
+          <span class="tag client">Client Project · DE</span>
         </div>
       </div>
-      <p>A custom child plugin for the popular 'Cooked' WordPress recipe plugin, safely extending core functionality without modifying parent files.</p>
+      <p>Diagnosed and resolved a full site outage on Managed WordPress (GoDaddy) — zero downtime, no full backup restore needed.</p>
       <ul>
-        <li>"Draft of Changes" workflow for safe recipe editing</li>
-        <li>Private GitHub auto-updater via PluginUpdateChecker</li>
-        <li>Enhanced recipe UI: Imperial overrides, dynamic TOC, accordions</li>
-        <li>Safe TinyMCE sanitization for dynamic data attributes</li>
+        <li><strong>Root cause:</strong> Isolated to a corrupted Elementor / Elementor Pro install via Safe Mode testing</li>
+        <li><strong>Security discovery:</strong> Crashed Elementor Pro was a nulled (pirated) build</li>
+        <li>Clean replacement with a properly licensed alternative</li>
+        <li>Site-wide security audit — flagged additional nulled plugins</li>
       </ul>
       <div class="project-links">
-        <a href="https://cookandwine.com.au/" target="_blank" rel="noopener">🌐 Client Site</a>
+        <a href="https://butrus.net" target="_blank" rel="noopener">🌐 Live Site</a>
       </div>
     </div>
 
@@ -764,14 +804,14 @@
         <li>Cross-client testing (Litmus, Email on Acid)</li>
       </ul>
       <div class="project-links">
-        <a href="https://github.com/Junaidshah1234/email-templates" target="_blank" rel="noopener">💻 GitHub Repo</a>
+        <a href="https://junaidshah1234.github.io/email-templates/" target="_blank" rel="noopener">🌐 View Templates</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== SKILLS ===== -->
-<section id="skills">
+<section id="skills" class="alt">
   <div class="container">
     <div class="section-label reveal">Tech Stack</div>
     <h2 class="reveal">Skills & Technologies</h2>
@@ -803,7 +843,7 @@
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials" class="alt">
+<section id="testimonials">
   <div class="container">
     <div class="section-label reveal">Client Feedback</div>
     <h2 class="reveal">What Clients Say</h2>
@@ -823,7 +863,7 @@
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section id="contact">
+<section id="contact" class="alt">
   <div class="container">
     <div class="contact-box reveal">
       <div class="section-label" style="justify-content:center">Let's Work Together</div>
