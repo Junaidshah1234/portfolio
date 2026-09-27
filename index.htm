@@ -96,7 +96,6 @@
   }
   .logo-mark{
     width:32px;height:32px;border-radius:8px;
-    background:var(--ink,var(--text));
     background:var(--text);
     color:var(--bg);
     display:flex;align-items:center;justify-content:center;
@@ -731,6 +730,28 @@
     <div class="project reveal">
       <div class="project-header">
         <div>
+          <h3>🧹 WordPress Cleanup & Security Optimization</h3>
+          <span class="tag client">Client Project · DE</span>
+        </div>
+      </div>
+      <p>Full backend audit and cleanup of a bloated WordPress website for a well-known Amazon FBA coach and e-commerce mentor.</p>
+      <ul>
+        <li><strong>Plugins:</strong> 42 → 10 — removed all inactive, unused, and testing plugins</li>
+        <li><strong>Pages:</strong> 25 → 12 — removed WooCommerce pages, drafts, and unrelated content</li>
+        <li><strong>Themes:</strong> 12 → 2 — kept Hello Elementor + Twenty Twenty-Five (backup)</li>
+        <li><strong>Database:</strong> Cleaned 391 items (revisions, drafts, trash)</li>
+        <li><strong>Media Library:</strong> Removed 120+ unused placeholder images</li>
+        <li><strong>Header Menu:</strong> Fixed broken "Presse" anchor link</li>
+        <li><strong>Backups:</strong> Before (2.15 GB) → After (1.07 GB) — 50% size reduction</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://butrus.net" target="_blank" rel="noopener">🌐 Live Site</a>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-header">
+        <div>
           <h3>📧 HTML Email Templates</h3>
           <span class="tag">Portfolio</span>
         </div>
@@ -844,7 +865,6 @@
     if (saved === 'light' || saved === 'dark') {
       root.setAttribute('data-theme', saved);
     } else {
-      // Follow system preference
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
         root.setAttribute('data-theme', 'light');
       } else {
@@ -931,7 +951,6 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
 
-    // Nav shadow on scroll
     var nav = document.querySelector('nav');
     window.addEventListener('scroll', function(){
       nav.style.boxShadow = window.scrollY > 20 ? '0 4px 20px rgba(0,0,0,.25)' : 'none';
